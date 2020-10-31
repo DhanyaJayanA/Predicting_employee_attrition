@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+                <meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>Predict Employee Attrition</title>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+	</head>
+
+<body>
+   
+	<!-- Result -->
+	<div class="results">
+		{% if prediction==1 %}
+			<h1> Prediction: <span class='danger'>Employee is going to Resign</span></h1>
+			<img class="image" src="{{ url_for('static', filename='RESIGN.jpg') }}" alt="Employee Attrition Image">
+		{% elif prediction==0 %}
+			<h1> Prediction: <span class='safe'> Great! Employee is NOT going to Resign.</span></h1>
+			<img class="image" src="{{ url_for('static', filename='work.jpg') }}" alt="No Employee Attrition Image">
+		{% endif %}
+	</div>
+       <br>
+       <a href="javascript:history.back()">
+       <input type="submit" class="my-cta-button" value="Go Back">
+       </a><br>
+      
+       <!-- Footer -->
+       <div class='footer'>
+           <p class='footer-description'>Made by Dhanya Jayan</p>
+       </div>
+</body>
+</html>

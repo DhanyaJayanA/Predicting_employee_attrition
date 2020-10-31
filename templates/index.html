@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>   
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta charset="UTF-8">
+	<title>Predict Employee Attrition </title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+
+ <!-- Website Title -->
+    	<div class="container">
+            <h2 class='container-heading'> <span class="heading_font"> PREDICT EMPLOYEE ATTRITION </span></h2>
+       	</div>
+
+ <!-- Text Area -->
+    	<div class="ml-container">
+    		<form action="{{ url_for('predict') }}" method="POST">
+                <input class="form-input" type="text" name="Age" placeholder="Age"><br>
+                <input class="form-input" type="text" name="MonthlyIncome" placeholder="Monthly Income"><br>
+                <input class="form-input" type="text" name="NumCompaniesWorked" placeholder="No of companies worked"><br>
+                <input class="form-input" type="text" name="YearsSinceLastPromotion" placeholder="Years since Last Promotion"><br>
+		<input class="form-input" type="text" name="TotalWorkingYears" placeholder="Total Working Years"><br>
+                <input class="form-input" type="text" name="DailyRate" placeholder="Daily Rate"><br><br>
+                <label for="JobSatisfaction">Job Satisfaction</label>
+                <select id="JobSatisfaction" name="JobSatisfaction">
+                     <option value="1" >Bad</option>
+                     <option value="2" >Good</option>
+                     <option value="3" >Better</option>
+                     <option value="4" >Best</option>
+                </select><br><br>
+                <label for="EnvironmentSatisfaction">Environment Satisfaction</label>
+                <select id="EnvironmentSatisfaction" name="EnvironmentSatisfaction">
+                     <option value="1" >Low</option>
+                     <option value="2" >Medium</option>
+                     <option value="3" >High</option>
+                     <option value="4" >Very High</option>
+                </select><br><br>
+         	<label for="WorkLifeBalance">Work Life Balance</label>
+                <select id="WorkLifeBalance" name="WorkLifeBalance">
+                     <option value="1" >Low</option>
+                     <option value="2" >Medium</option>
+                     <option value="3" >High</option>
+                     <option value="4" >Very High</option>
+                </select><br><br>
+		<label for="OverTime">Over Time</label>
+		 <select id="OverTime" name="OverTime">
+                     <option value="1" >Yes</option>
+                     <option value="0" >No</option>
+		</select><br><br>
+                <label for="RelationshipSatisfaction">Relationship Satisfaction</label>
+                <select id="RelationshipSatisfaction" name="RelationshipSatisfaction">
+                     <option value="1" >Low</option>
+                     <option value="2" >Medium</option>
+                     <option value="3" >High</option>
+                     <option value="4" >Very High</option>
+                </select><br><br>
+                <label for="Education">Education</label>
+                <select id="Education" name="Education">
+                    <option value="1" >Below College</option>
+                    <option value="2" >College</option>
+                    <option value="3" >Bachelor</option>
+                    <option value="4" >Master</option>
+		    <option value="5" >Doctor</option>
+                </select><br><br>
+               <label for="PerformanceRating">Performance Rating</label>
+               <select id="PerformanceRating" name="PerformanceRating">
+                    <option value="1" >Low</option>
+                    <option value="2" >Good</option>
+                    <option value="3" >Excellent</option>
+                    <option value="4" >Outstanding</option>
+               </select><br><br>
+		<label for="JobInvolvement">Job Involvement</label>
+                <select id="JobInvolvement" name="JobInvolvement">
+                     <option value="1" >Low</option>
+                     <option value="2" >Medium</option>
+                     <option value="3" >High</option>
+                     <option value="4" >Very High</option>
+                </select><br>
+              <br><input type="submit" class="my-cta-button" value="Predict"><br>          
+	</form>
+</div>
+
+ <!-- Footer -->
+       <div class='footer'>
+	   <div class="contact">
+               <a target="_blank" href="https://github.com/DhanyaJayanA/Predicting_employee_attrition"><i class="fab fa-github fa-lg contact-icon"></i></a>
+           </div>
+           <p class='footer-description'>Made by Dhanya Jayan</p>
+       </div>
+
+
+</body>
+</html>
